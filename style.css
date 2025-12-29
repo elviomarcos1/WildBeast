@@ -17,7 +17,7 @@ a {
 
 img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     border-radius: 5px;
 }
 
@@ -100,9 +100,11 @@ img {
 
     .header {
         grid-template-columns: auto;
+        justify-content: center;
     }
 
     .logo {
+        justify-self: center;
         margin-bottom: 20px;
     }
 
@@ -210,6 +212,18 @@ img {
     justify-self: center;
 }
 
+@media (max-width: 600px) {
+
+    .content {
+        grid-template-columns:  auto;
+    }
+
+    .titulo {
+        text-align: center;
+    }
+
+}
+
 /* Estilos Content */
 
 p {
@@ -282,7 +296,7 @@ p {
 .destaque {
     font-size: 0.875rem;
     color: #B07DFB;
-    max-width: 16em;
+    align-self: center;
 }
 
 .citacao, .atributos {
@@ -313,6 +327,14 @@ p {
     border-top: 2px solid #B07DFB;
 }
 
+@media (max-width: 600px) {
+
+    .caracteristicas {
+    justify-content: center;
+}
+
+}
+
 /* Anuncios */
 
 .anuncios {
@@ -323,6 +345,7 @@ p {
     padding: 30px;
     grid-gap: 30px;
     cursor: pointer;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 /* Footer */
